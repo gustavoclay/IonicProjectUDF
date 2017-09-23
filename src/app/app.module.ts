@@ -17,6 +17,8 @@ import { FavoritePageModule } from '../pages/favorite/favorite.module';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { MorePageModule} from '../pages/more/more.module';
 import { SettingsPageModule } from '../pages/settings/settings.module';
+import { IntroPageModule } from '../pages/intro/intro.module';
+
 
 
 
@@ -33,7 +35,8 @@ import { SettingsPageModule } from '../pages/settings/settings.module';
     FavoritePageModule,
     FeedPageModule,
     MorePageModule,
-    SettingsPageModule
+    SettingsPageModule,
+    IntroPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

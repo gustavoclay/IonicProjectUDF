@@ -17,9 +17,7 @@ export class TabsPage {
 
   homeRoot = 'HomePage'
   feedRoot = 'FeedPage'
-  favoriteRoot = 'FavoritePage'
-  moreRoot = 'MorePage'
-  settingsRoot = 'SettingsPage'
+
 
 
   constructor(public navCtrl: NavController) {}
