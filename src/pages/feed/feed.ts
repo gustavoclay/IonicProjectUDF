@@ -8,18 +8,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
-@Component({
-  selector: 'page-feed',
-  templateUrl: 'feed.html',
-})
-export class FeedPage {
+ @IonicPage()
+ @Component({
+   selector: 'page-feed',
+   templateUrl: 'feed.html',
+ })
+ export class FeedPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+   public objeto_feed = {
+     titulo: "Marty MacFly",
+     data: "November 5, 1955",
+     decricao: "Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.",
+     qtd_likes: 12,
+     qtd_comments: 4,
+     time_comment: "11h ago",
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
-  }
+   constructor(public navCtrl: NavController, public navParams: NavParams) {
+   }
 
-}
+   ionViewDidLoad() {
+     console.log('ionViewDidLoad FeedPage');
+   }
+
+ }
