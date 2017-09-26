@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HTTP } from '@ionic-native/http';
+import { httpModule } from "@angular/http";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -18,8 +20,7 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { MorePageModule} from '../pages/more/more.module';
 import { SettingsPageModule } from '../pages/settings/settings.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
-
-
+import { MoovieProvider } from '../providers/moovie/moovie';
 
 
 
@@ -36,7 +37,8 @@ import { IntroPageModule } from '../pages/intro/intro.module';
     FeedPageModule,
     MorePageModule,
     SettingsPageModule,
-    IntroPageModule
+    IntroPageModule,
+    httpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,7 +53,8 @@ import { IntroPageModule } from '../pages/intro/intro.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MoovieProvider
   ]
 })
 export class AppModule {}
